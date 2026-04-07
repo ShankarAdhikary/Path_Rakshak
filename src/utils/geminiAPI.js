@@ -2,7 +2,7 @@ export async function generateResponse(apiKey, systemContext, userMessage) {
   const key = apiKey || localStorage.getItem('acciguard_gemini_key') || import.meta.env.VITE_GEMINI_API_KEY
   if (!key) throw new Error('No API key. Please set your Gemini API key in Settings.')
 
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${key}`
+  const url = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent'
   const body = {
     contents: [
       {
@@ -15,7 +15,10 @@ export async function generateResponse(apiKey, systemContext, userMessage) {
 
   const res = await fetch(url, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: {
+      'Content-Type': 'application/json',
+      'x-goog-api-key': key,
+    },
     body: JSON.stringify(body),
   })
 

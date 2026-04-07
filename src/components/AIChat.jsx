@@ -35,11 +35,15 @@ export default function AIChat({ emergencyType }) {
     if (scrollRef.current) scrollRef.current.scrollTop = scrollRef.current.scrollHeight
   }, [messages])
 
+  const hasSentInitial = useRef(false)
   useEffect(() => {
+    if (hasSentInitial.current) return
+    hasSentInitial.current = true
     const initMsg = INITIAL_PROMPTS[emergencyType] || INITIAL_PROMPTS['Road Accident']
     sendMessage(initMsg, true)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  // sendMessage is defined in the same render scope; using a ref flag avoids stale closure issues
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [emergencyType])
 
   async function sendMessage(text, isAuto = false) {
     const key = getApiKey()
