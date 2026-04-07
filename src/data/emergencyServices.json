@@ -1,0 +1,64 @@
+{
+  "cities": [
+    {
+      "name": "Delhi",
+      "lat": 28.6139,
+      "lng": 77.2090,
+      "services": [
+        { "type": "hospital", "name": "AIIMS Delhi", "lat": 28.5672, "lng": 77.2100, "phone": "011-26588500", "address": "Ansari Nagar, New Delhi" },
+        { "type": "hospital", "name": "Safdarjung Hospital", "lat": 28.5686, "lng": 77.2060, "phone": "011-26165060", "address": "Ring Road, New Delhi" },
+        { "type": "police", "name": "Delhi Police HQ", "lat": 28.6304, "lng": 77.2177, "phone": "100", "address": "ITO, New Delhi" },
+        { "type": "ambulance", "name": "Delhi Ambulance Service", "lat": 28.6139, "lng": 77.2090, "phone": "102", "address": "New Delhi" },
+        { "type": "towing", "name": "Delhi Vehicle Rescue", "lat": 28.6200, "lng": 77.2050, "phone": "1800-11-0031", "address": "New Delhi" }
+      ]
+    },
+    {
+      "name": "Mumbai",
+      "lat": 19.0760,
+      "lng": 72.8777,
+      "services": [
+        { "type": "hospital", "name": "KEM Hospital", "lat": 19.0042, "lng": 72.8427, "phone": "022-24107000", "address": "Parel, Mumbai" },
+        { "type": "hospital", "name": "Nair Hospital", "lat": 19.0317, "lng": 72.8346, "phone": "022-23027640", "address": "Mumbai Central" },
+        { "type": "police", "name": "Mumbai Police Control", "lat": 18.9388, "lng": 72.8354, "phone": "100", "address": "Crawford Market, Mumbai" },
+        { "type": "ambulance", "name": "MCGM Ambulance", "lat": 19.0760, "lng": 72.8777, "phone": "1916", "address": "Mumbai" },
+        { "type": "towing", "name": "Mumbai Towing Service", "lat": 19.0820, "lng": 72.8810, "phone": "022-22621855", "address": "Mumbai" }
+      ]
+    },
+    {
+      "name": "Bengaluru",
+      "lat": 12.9716,
+      "lng": 77.5946,
+      "services": [
+        { "type": "hospital", "name": "Victoria Hospital", "lat": 12.9636, "lng": 77.5745, "phone": "080-26706928", "address": "Ft. Road, Bengaluru" },
+        { "type": "hospital", "name": "Bowring Hospital", "lat": 12.9819, "lng": 77.6077, "phone": "080-25469200", "address": "Shivajinagar, Bengaluru" },
+        { "type": "police", "name": "Bengaluru Police", "lat": 12.9766, "lng": 77.5713, "phone": "100", "address": "Infantry Road, Bengaluru" },
+        { "type": "ambulance", "name": "BBMP Ambulance", "lat": 12.9716, "lng": 77.5946, "phone": "108", "address": "Bengaluru" },
+        { "type": "towing", "name": "Bengaluru Vehicle Rescue", "lat": 12.9780, "lng": 77.6100, "phone": "080-22868000", "address": "Bengaluru" }
+      ]
+    },
+    {
+      "name": "Chennai",
+      "lat": 13.0827,
+      "lng": 80.2707,
+      "services": [
+        { "type": "hospital", "name": "Rajiv Gandhi Govt Hospital", "lat": 13.0827, "lng": 80.2700, "phone": "044-25305000", "address": "Park Town, Chennai" },
+        { "type": "hospital", "name": "Government Stanley Hospital", "lat": 13.1121, "lng": 80.2843, "phone": "044-25281422", "address": "Stanley Road, Chennai" },
+        { "type": "police", "name": "Chennai Police Commissionerate", "lat": 13.0569, "lng": 80.2562, "phone": "100", "address": "Egmore, Chennai" },
+        { "type": "ambulance", "name": "GVK EMRI Chennai", "lat": 13.0827, "lng": 80.2707, "phone": "108", "address": "Chennai" },
+        { "type": "towing", "name": "Chennai Towing", "lat": 13.0900, "lng": 80.2800, "phone": "044-23452000", "address": "Chennai" }
+      ]
+    },
+    {
+      "name": "Kolkata",
+      "lat": 22.5726,
+      "lng": 88.3639,
+      "services": [
+        { "type": "hospital", "name": "SSKM Hospital", "lat": 22.5320, "lng": 88.3392, "phone": "033-22044455", "address": "AJC Bose Road, Kolkata" },
+        { "type": "hospital", "name": "NRS Medical College", "lat": 22.5505, "lng": 88.3595, "phone": "033-22650522", "address": "AJC Bose Road, Kolkata" },
+        { "type": "police", "name": "Kolkata Police HQ", "lat": 22.5726, "lng": 88.3472, "phone": "100", "address": "Lalbazar, Kolkata" },
+        { "type": "ambulance", "name": "Kolkata Ambulance", "lat": 22.5726, "lng": 88.3639, "phone": "108", "address": "Kolkata" },
+        { "type": "towing", "name": "Kolkata Vehicle Recovery", "lat": 22.5800, "lng": 88.3700, "phone": "033-22143526", "address": "Kolkata" }
+      ]
+    }
+  ]
+}

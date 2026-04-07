@@ -1,0 +1,64 @@
+{
+  "protocols": [
+    {
+      "id": "bleeding",
+      "title": "Severe Bleeding",
+      "steps": [
+        "Call 112 immediately",
+        "Apply firm, direct pressure with clean cloth or bandage",
+        "Do not remove cloth — add more on top if soaked",
+        "Keep pressure for at least 10 minutes",
+        "Elevate injured limb above heart level if possible",
+        "Do NOT apply tourniquet unless bleeding is life-threatening"
+      ]
+    },
+    {
+      "id": "fracture",
+      "title": "Fracture / Broken Bone",
+      "steps": [
+        "Do not attempt to straighten the bone",
+        "Immobilize using splint (use magazines, cardboard)",
+        "Apply ice wrapped in cloth to reduce swelling",
+        "Keep the victim still and comfortable",
+        "Monitor for signs of shock (pale, cold, confused)",
+        "Wait for medical help"
+      ]
+    },
+    {
+      "id": "head_injury",
+      "title": "Head Injury",
+      "steps": [
+        "Call emergency services immediately",
+        "Keep victim awake and talking",
+        "Do not remove helmet if worn",
+        "If unconscious, place in recovery position (unless spinal injury suspected)",
+        "Watch for: unequal pupils, confusion, vomiting",
+        "Do NOT give food, water, or medication"
+      ]
+    },
+    {
+      "id": "spinal",
+      "title": "Suspected Spinal Injury",
+      "steps": [
+        "Do NOT move the victim — this is critical",
+        "Call emergency services immediately",
+        "Keep head, neck, and spine aligned",
+        "If victim must be moved (fire/water), use multiple people to move as one unit",
+        "Keep victim warm and conscious",
+        "Document how accident happened for medics"
+      ]
+    },
+    {
+      "id": "vehicle_fire",
+      "title": "Vehicle Fire",
+      "steps": [
+        "Get everyone away from vehicle immediately (minimum 30 meters)",
+        "Call fire services: 101 (India)",
+        "Do NOT return to burning vehicle for any reason",
+        "If victim clothing is on fire: Stop, Drop, Roll",
+        "Move to upwind side of vehicle",
+        "Warn passing traffic to slow down"
+      ]
+    }
+  ]
+}
