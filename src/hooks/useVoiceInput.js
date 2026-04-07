@@ -11,7 +11,7 @@ export default function useVoiceInput() {
     if (!supported) return
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
     const rec = new SpeechRecognition()
-    rec.lang = localStorage.getItem('acciguard_language') === 'hi' ? 'hi-IN' : 'en-IN'
+    rec.lang = localStorage.getItem('acciguard_language') === 'hi' ? 'hi-IN' : 'en-US'
     rec.continuous = false
     rec.interimResults = false
     rec.onresult = e => setTranscript(e.results[0][0].transcript)

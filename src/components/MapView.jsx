@@ -77,7 +77,7 @@ export default function MapView() {
           {lat && lng && (
             <>
               <RecenterMap lat={lat} lng={lng} />
-              <Circle center={[lat, lng]} radius={50} pathOptions={{ color: '#dc2626', fillColor: '#dc2626', fillOpacity: 0.3 }} />
+              <Circle center={[lat, lng]} radius={150} pathOptions={{ color: '#dc2626', fillColor: '#dc2626', fillOpacity: 0.3 }} />
               <Marker position={[lat, lng]}>
                 <Popup><strong>📍 Your Location</strong></Popup>
               </Marker>

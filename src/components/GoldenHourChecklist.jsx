@@ -1,18 +1,19 @@
 import { useState } from 'react'
 
+// activeSec: seconds threshold when this step becomes current
 const STEPS = [
-  { id: 1, time: '0–2 min', urgency: 'critical', text: 'Ensure you and others are safe — move away from traffic', checked: false },
-  { id: 2, time: '0–2 min', urgency: 'critical', text: 'Call 112 (India) or local emergency number immediately', checked: false },
-  { id: 3, time: '2–5 min', urgency: 'critical', text: 'Do NOT move the victim if spinal injury is suspected', checked: false },
-  { id: 4, time: '2–5 min', urgency: 'critical', text: 'Control severe bleeding: apply firm pressure with cloth', checked: false },
-  { id: 5, time: '5–10 min', urgency: 'urgent', text: 'Keep victim conscious: talk to them, check breathing', checked: false },
-  { id: 6, time: '5–10 min', urgency: 'urgent', text: 'Cover victim with blanket/jacket to prevent shock', checked: false },
-  { id: 7, time: '10–20 min', urgency: 'important', text: 'Take photos of the scene for insurance/police report', checked: false },
-  { id: 8, time: '10–20 min', urgency: 'important', text: 'Collect witness names and contact information', checked: false },
-  { id: 9, time: '20–40 min', urgency: 'normal', text: 'Note other vehicle details (number plate, insurance)', checked: false },
-  { id: 10, time: '20–40 min', urgency: 'normal', text: 'Do not admit fault at scene', checked: false },
-  { id: 11, time: '40–60 min', urgency: 'normal', text: 'Request copy of police report / FIR number', checked: false },
-  { id: 12, time: '40–60 min', urgency: 'normal', text: 'Contact insurance company as soon as stable', checked: false },
+  { id: 1, activeSec: 0,    time: '0–2 min',   urgency: 'critical',  text: 'Ensure you and others are safe — move away from traffic', checked: false },
+  { id: 2, activeSec: 0,    time: '0–2 min',   urgency: 'critical',  text: 'Call 112 (India) or local emergency number immediately', checked: false },
+  { id: 3, activeSec: 120,  time: '2–5 min',   urgency: 'critical',  text: 'Do NOT move the victim if spinal injury is suspected', checked: false },
+  { id: 4, activeSec: 120,  time: '2–5 min',   urgency: 'critical',  text: 'Control severe bleeding: apply firm pressure with cloth', checked: false },
+  { id: 5, activeSec: 300,  time: '5–10 min',  urgency: 'urgent',    text: 'Keep victim conscious: talk to them, check breathing', checked: false },
+  { id: 6, activeSec: 300,  time: '5–10 min',  urgency: 'urgent',    text: 'Cover victim with blanket/jacket to prevent shock', checked: false },
+  { id: 7, activeSec: 600,  time: '10–20 min', urgency: 'important', text: 'Take photos of the scene for insurance/police report', checked: false },
+  { id: 8, activeSec: 600,  time: '10–20 min', urgency: 'important', text: 'Collect witness names and contact information', checked: false },
+  { id: 9, activeSec: 1200, time: '20–40 min', urgency: 'normal',    text: 'Note other vehicle details (number plate, insurance)', checked: false },
+  { id: 10, activeSec: 1200, time: '20–40 min', urgency: 'normal',   text: 'Do not admit fault at scene', checked: false },
+  { id: 11, activeSec: 2400, time: '40–60 min', urgency: 'normal',   text: 'Request copy of police report / FIR number', checked: false },
+  { id: 12, activeSec: 2400, time: '40–60 min', urgency: 'normal',   text: 'Contact insurance company as soon as stable', checked: false },
 ]
 
 const URGENCY_STYLES = {
@@ -49,11 +50,12 @@ export default function GoldenHourChecklist({ elapsed = 0 }) {
       <div className="space-y-2">
         {items.map(item => {
           const style = URGENCY_STYLES[item.urgency]
+          const isActive = elapsed >= item.activeSec
           return (
             <button
               key={item.id}
               onClick={() => toggle(item.id)}
-              className={`w-full text-left p-4 rounded-xl border flex items-start gap-3 transition-opacity ${style.bg} ${item.checked ? 'opacity-50' : ''}`}
+              className={`w-full text-left p-4 rounded-xl border flex items-start gap-3 transition-opacity ${style.bg} ${item.checked ? 'opacity-50' : ''} ${!isActive ? 'opacity-40' : ''}`}
             >
               <div className={`mt-0.5 w-6 h-6 rounded-full border-2 flex items-center justify-center flex-shrink-0 ${item.checked ? 'bg-green-600 border-green-600' : 'border-slate-500'}`}>
                 {item.checked && <span className="text-white text-xs">✓</span>}
