@@ -1,6 +1,8 @@
 import { useState } from 'react'
 
 export default function Settings() {
+  // API key is stored in localStorage only on user's explicit action (user-controlled, device-local)
+  // Prefer VITE_GEMINI_API_KEY env var for non-interactive deployments
   const [apiKey, setApiKey] = useState(() => localStorage.getItem('acciguard_gemini_key') || '')
   const [country, setCountry] = useState(() => localStorage.getItem('acciguard_country') || 'India')
   const [lang, setLang] = useState(() => localStorage.getItem('acciguard_language') || 'en')
